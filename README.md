@@ -1,0 +1,1 @@
+# plugins-vk-google-job-posting-manager

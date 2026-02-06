@@ -2,9 +2,9 @@
 Contributors: vektor-inc,kurudrive,naoki0h,una9,rickaddison7634
 Donate link:
 Tags: Google Job Posting, Recruitment, Gutenberg.
-Requires at least: 6.5
-Tested up to: 6.8
-Stable tag: 1.2.20
+Requires at least: 6.6
+Tested up to: 6.9
+Stable tag: 1.2.24
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -45,6 +45,19 @@ You can overwrite common fields value by fill out each post's custom fields.
 4. You can use common fields to omit to enter duplicated information.
 
 == Changelog ==
+
+= 1.2.24 =
+[ Bug fix ] Compatible with the Plugin Checker
+
+= 1.2.23 =
+[ Bug fix ] Fix JSON-LD XSS
+
+= 1.2.22 =
+[ Outer ] Update Custom Field Builder
+
+
+= 1.2.21 =
+[ Add feature ] Added i18n support for "Job Posting" block to enable WordPress.org translations.
 
 = 1.2.20 =
 * [ Outer ] Update block to use apiVersion: 3 for iframe-based editing

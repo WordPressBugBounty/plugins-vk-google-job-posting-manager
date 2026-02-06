@@ -8,6 +8,9 @@ vgjpm_array_to_string();
 vgjpm_image_filter_id_to_url();
 vgjpm_sanitize_arr();
 */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 function vgjpm_create_jobpost_posttype() {
 	$list          = '<ul>';
@@ -59,7 +62,32 @@ function vgjpm_get_custom_fields( $post_id ) {
 	}
 
 	if ( isset( $post->post_date ) ) {
-		$custom_fields['vkjp_datePosted'] = date( 'Y-m-d', strtotime( $post->post_date ) );
+		$custom_fields['vkjp_datePosted'] = gmdate( 'Y-m-d', strtotime( $post->post_date ) );
+	}
+
+	// Sanitize text-based fields for consistency.
+	$sanitize_keys = array(
+		'vkjp_title',
+		'vkjp_name',
+		'vkjp_identifier',
+		'vkjp_sameAs',
+		'vkjp_logo',
+		'vkjp_streetAddress',
+		'vkjp_addressLocality',
+		'vkjp_addressRegion',
+		'vkjp_postalCode',
+		'vkjp_addressCountry',
+		'vkjp_jobLocationType',
+		'vkjp_applicantLocationRequirements_name',
+		'vkjp_currency',
+		'vkjp_unitText',
+		'vkjp_employmentType',
+	);
+
+	foreach ( $sanitize_keys as $sanitize_key ) {
+		if ( isset( $custom_fields[ $sanitize_key ] ) && is_string( $custom_fields[ $sanitize_key ] ) ) {
+			$custom_fields[ $sanitize_key ] = sanitize_text_field( $custom_fields[ $sanitize_key ] );
+		}
 	}
 
 	return $custom_fields;
@@ -73,7 +101,7 @@ function vgjpm_use_common_values( $custom_fields, $output_type ) {
 
 	foreach ( $default_custom_fields as $key => $value ) {
 
-		$options = vkjpm_get_common_field_options();
+		$options = vgjpm_get_common_field_options();
 
 		$custom_fields = vgjpm_image_filter_id_to_url( $custom_fields, $key, $options );
 

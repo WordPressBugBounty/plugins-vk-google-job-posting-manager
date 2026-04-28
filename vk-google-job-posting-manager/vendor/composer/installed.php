@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'vektor/vk-google-job-posting-manager',
-        'pretty_version' => '1.3.0',
-        'version' => '1.3.0.0',
-        'reference' => '0fe2757f82683c4cc17b3d4fde5fb0aef9c69ca9',
+        'pretty_version' => '1.3.1',
+        'version' => '1.3.1.0',
+        'reference' => '2cd3bdb0ae7f108a47069c1bb89ee07b73c46c81',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'vektor/vk-google-job-posting-manager' => array(
-            'pretty_version' => '1.3.0',
-            'version' => '1.3.0.0',
-            'reference' => '0fe2757f82683c4cc17b3d4fde5fb0aef9c69ca9',
+            'pretty_version' => '1.3.1',
+            'version' => '1.3.1.0',
+            'reference' => '2cd3bdb0ae7f108a47069c1bb89ee07b73c46c81',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

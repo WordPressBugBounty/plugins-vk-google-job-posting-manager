@@ -21,6 +21,8 @@ class ComposerStaticInit99e3fe7969994850bdf95684bb8a74b3
     );
 
     public static $classMap = array (
+        'Alcohol\\ISO4217' => __DIR__ . '/..' . '/alcohol/iso4217/ISO4217.php',
+        'Alcohol\\ISO4217Test' => __DIR__ . '/..' . '/alcohol/iso4217/ISO4217Test.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 

@@ -6,5 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Alcohol\\ISO4217' => $vendorDir . '/alcohol/iso4217/ISO4217.php',
+    'Alcohol\\ISO4217Test' => $vendorDir . '/alcohol/iso4217/ISO4217Test.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );
